@@ -1,12 +1,15 @@
 import React from 'react';
+import CircularProgress from '@material-ui/core/CircularProgress';
+import './ReviewsList.css'
 
-const ReviewListItem = ({author, publish_date, rating, id})=>(
+
+const ReviewListItem = ({author, publish_date, rating, id, body})=>(
     <div className="mb-3">
-        <h3>
+        <h3 className="Author">
             {author}
         </h3>
         <div className="mb-2">
-            {rating}
+            {rating} - {body}
         </div>
         <div>
         </div>
@@ -20,6 +23,7 @@ const ReviewsList = ({reviews})=>(
                 {reviews.map(review=><ReviewListItem key={review.id} {...review}/>)}
             </div> :
             <div>
+                <CircularProgress  color="primary" />
                 Gathering Reviews...
             </div>
         }

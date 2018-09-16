@@ -1,6 +1,22 @@
 .App-header {
     background-color: #222;
-    height: 150px;
+    height: 300px;
     padding: 20px;
     color: white;
+  }
+
+  .App-logo {
+    animation: Fade-in-left 2s;
+    height: 150px;
+  }
+
+  @keyframes Fade-in-left {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateX(-150px);
+    }
+    100% {
+      opacity: 1;
+      -webkit-transform: translateX(0);
+    }
   }
