@@ -1,5 +1,6 @@
 export { 
     withStyles,
     Typography,
-    Grid
+    Grid,
+    Button
 } from '@material-ui/core'

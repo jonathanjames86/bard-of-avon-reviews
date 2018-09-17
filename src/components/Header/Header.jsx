@@ -1,31 +1,22 @@
 import React from 'react';
 import shakeBro from '../../resources/william-shake.png';
 import './Header.css';
-import { withStyles, Typography } from '../Common'
+import { withStyles, Typography } from '../Common';
 
 const styles = theme => ({
-  root: {
-    display: 'flex',
-    flexDirection: 'column',
-    height:'50vh',
-    overflow: 'scroll',
-    // height: '65vh',
-    width: '100vw',
-    padding: `0 ${theme.spacing.unit *2}px`,
-    backgroundColor: '#F8F6F8',
-  },
   headerContainer: {
     backgroundColor: "#80CBC4",
-    height: '15vh',
-    padding: '20px',
+    padding: `${theme.spacing.unit}px`,
     color: 'white',
     display: 'flex',
     flexDirection: 'row',
+    alignItems: 'center',
+    aligncontent: 'center',
     [theme.breakpoints.down('xs')]: {
       height: '15vh',
     },
     [theme.breakpoints.up('sm')]: {
-      height: '10vh',
+      height: '6vh',
     },
   }
 })

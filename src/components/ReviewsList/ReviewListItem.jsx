@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import moment from 'moment'
 import placeholder from '../../resources/user-placeholder.svg';
 import teal from '@material-ui/core/colors/teal';
-import { withStyles, Typography, Grid } from '../Common'
+import { withStyles, Typography, Grid } from '../Common';
 
 const styles = theme => ({
     container: {
@@ -35,15 +35,14 @@ const ReviewListItem = ({ classes, author, publish_date, rating, id, body})=>(
                     <img className={classes.icon} alt="placeholder-img" src={placeholder}/>
                     <Typography variant="subheading" className="Author">{author}</Typography>
                 </div>
+                <div className={classes.dateRating}>
+                    <Stars count={5} color1={"lightgray"} color2={teal[500]} value={rating} edit={false}/>
+                </div>
+                <div className={classes.reviewBody}>{`"${body}"`}</div>
+                <Typography color='textSecondary' variant='body1'>{`${moment(publish_date).format('MMMM Do YYYY')}`}</Typography>
             </Grid>
         </Grid>
-        <div className={classes.dateRating}>
-            <Stars count={5} color1={"lightgray"} color2={teal[500]} value={rating} edit={false}/>
-        </div>
-        <div className={classes.reviewBody}>
-            {`"${body}"`}
-        </div>
-        <Typography color='textSecondary' variant='body1'>{`${moment(publish_date).format('MMMM Do YYYY')}`}</Typography>
+        
     </div>
 );
 

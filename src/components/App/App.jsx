@@ -2,12 +2,11 @@ import React, { Component } from 'react';
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
 import ReviewsList from '../ReviewsList/ReviewsList';
-import './App.css';
+import ReviewsHeader from '../ReviewsHeader/ReviewsHeader';
 import { getReviews } from '../../configs/api-configs';
 
 // Material UI
-import Typography from '@material-ui/core/Typography';
-import { withStyles } from '@material-ui/core/styles';
+import { withStyles, Typography } from '../Common';
 import withRoot from '../../withRoot';
 
 const styles = theme => ({
@@ -25,7 +24,7 @@ class App extends Component {
       items: null
     };
   }
-  componentDidMount() {
+  componentWillMount() {
     getReviews().then(result => {
       this.setState({
         items: result
@@ -37,11 +36,9 @@ class App extends Component {
     return (
       <div className="App">
        <Header />
-       <Typography variant="headline">
-         Reviews
-       </Typography>
-        <ReviewsList className="" reviews={this.state.items} />
-        <Footer />
+       <ReviewsHeader />
+       <ReviewsList reviews={this.state.items} />
+       <Footer />
       </div>
     );
   }

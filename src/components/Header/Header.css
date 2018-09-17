@@ -7,13 +7,24 @@
 
   .App-logo {
     animation: Fade-in-left 2s;
-    height: 10vh;
+    height: 5vh;
+    padding-right: 22px; 
   }
   
   .Header-title {
     animation: Fade-in-right 2s;
     font-size: 2.5vh;
   }
+
+  @media only screen and (max-width: 600px) {
+    .App-logo {
+        height: 12vh;
+    }
+
+    .Header-title {
+      font-size: 3.5vh;
+    }
+}
 
   @keyframes Fade-in-left {
     0% {
