@@ -7,7 +7,6 @@ import { getReviews } from '../../configs/api-configs';
 
 // Material UI
 import Typography from '@material-ui/core/Typography';
-import green from '@material-ui/core/colors/green';
 import { withStyles } from '@material-ui/core/styles';
 import withRoot from '../../withRoot';
 
@@ -16,15 +15,6 @@ const styles = theme => ({
     textAlign: 'center',
     paddingTop: theme.spacing.unit * 20,
     padding: theme.spacing.unit,
-    [theme.breakpoints.down('sm')]: {
-      backgroundColor: theme.palette.secondary.main,
-    },
-    [theme.breakpoints.up('md')]: {
-      backgroundColor: theme.palette.primary.main,
-    },
-    [theme.breakpoints.up('lg')]: {
-      backgroundColor: green[500],
-    },
   },
 });
 
@@ -47,7 +37,7 @@ class App extends Component {
     return (
       <div className="App">
        <Header />
-       <Typography variant="headline" gutterBottom>
+       <Typography variant="headline">
          Reviews
        </Typography>
         <ReviewsList className="" reviews={this.state.items} />
