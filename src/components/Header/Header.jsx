@@ -5,7 +5,7 @@ import { withStyles, Typography } from '../Common';
 
 const styles = theme => ({
   headerContainer: {
-    backgroundColor: "#80CBC4",
+    backgroundColor: theme.palette.primary.light,
     padding: `${theme.spacing.unit}px`,
     color: 'white',
     display: 'flex',

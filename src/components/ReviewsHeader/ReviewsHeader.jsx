@@ -3,6 +3,7 @@ import { withStyles, Typography, Button} from '../Common';
 
 const styles = theme => ({
     root: {
+      backgroundColor: theme.palette.secondary.light,
       display: 'flex',
       flexDirection: 'row',
       alignItems: 'center',
@@ -14,7 +15,9 @@ const styles = theme => ({
       },
     },
     reviewsTitle: {
-      paddingRight: `${theme.spacing.unit *2}px`
+      paddingRight: `${theme.spacing.unit *2}px`,
+      color: theme.palette.secondary.dark,
+      fontFamily: 'Dosis'
     },
     button: {
       padding: `${theme.spacing.unit}px`,

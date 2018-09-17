@@ -23,7 +23,12 @@ const styles = theme => ({
         flexDirection: 'column',
     },
     reviewBody: {
-      textAlign: 'left',
+      textAlign: 'left'
+    },
+    dateText: {
+      color: theme.palette.secondary.main,
+      fontFamily: 'Dosis'
+  
     }
   })
 
@@ -39,7 +44,7 @@ const ReviewListItem = ({ classes, author, publish_date, rating, id, body})=>(
                     <Stars count={5} color1={"lightgray"} color2={teal[500]} value={rating} edit={false}/>
                 </div>
                 <div className={classes.reviewBody}>{`"${body}"`}</div>
-                <Typography color='textSecondary' variant='body1'>{`${moment(publish_date).format('MMMM Do YYYY')}`}</Typography>
+                <Typography className={classes.dateText} color='textSecondary' variant='body1'>{`${moment(publish_date).format('MMMM Do YYYY')}`}</Typography>
             </Grid>
         </Grid>
         
