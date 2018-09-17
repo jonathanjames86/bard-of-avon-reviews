@@ -1,7 +1,7 @@
 import React from 'react';
 import shakeBro from '../../resources/william-shake.png';
 import './Header.css';
-import { withStyles, Typography } from '../Common';
+import { withStyles } from '../Common';
 
 const styles = theme => ({
   headerContainer: {

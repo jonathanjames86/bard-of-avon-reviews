@@ -26,18 +26,18 @@ const styles = theme => ({
     },
   })
 
-const ReviewsHeader = ({classes, reviews})=>(
+const ReviewsHeader = ({classes, sortList})=>(
     <div className={classes.root}>
        <Typography className={classes.reviewsTitle} variant="title">
          BOA Reviews
        </Typography>
-       <Button className={classes.button}>
+       <Button onClick={sortList.bind(this, 'publish_date', 'desc')} className={classes.button}>
         <i className="material-icons">date_range</i>
        </Button>
-       <Button className={classes.button}>
+       <Button onClick={sortList.bind(this, 'rating', 'desc')} className={classes.button}>
         <i className="material-icons">grade</i>
        </Button>
-       <Button className={classes.button}>
+       <Button onClick={sortList.bind(this, 'author')} className={classes.button}>
         <i className="material-icons">face</i>
        </Button>
     </div>
